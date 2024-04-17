@@ -1,8 +1,6 @@
-import { defineNuxtPlugin, useRuntimeConfig } from '#app'
+import { defineNuxtPlugin } from '#app'
 
 export default defineNuxtPlugin((nuxtApp) => {
-  // const { id, lang } = useRuntimeConfig().feedefyOptions as any;
-
   const { id, lang } = nuxtApp.$config.public.feedefy;
 
   nuxtApp.hook('app:mounted', () => {
