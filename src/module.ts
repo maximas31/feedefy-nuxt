@@ -20,7 +20,7 @@ declare module '@nuxt/schema' {
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: '@feedefy/nuxt',
+    name: 'feedefy',
     configKey: 'feedefy',
     compatibility: {
       nuxt: '^3.0.0'
