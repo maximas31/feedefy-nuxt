@@ -3,7 +3,7 @@ import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
 // Module options TypeScript interface definition
 export interface ModuleOptions {
   id: string;
-  lang?: string | undefined;
+  lang?: string;
 }
 
 declare module '@nuxt/schema' {
