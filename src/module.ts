@@ -3,20 +3,20 @@ import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
 // Module options TypeScript interface definition
 export interface ModuleOptions {
   id: string;
-  lang?: string;
+  lang?: string | undefined;
 }
 
-// declare module '@nuxt/schema' {
-//   interface PublicRuntimeConfig {
-//     feedefy: ModuleOptions
-//   }
-//   interface NuxtConfig {
-//     feedefy?: ModuleOptions
-//   }
-//   interface NuxtOptions {
-//     feedefy?: ModuleOptions
-//   }
-// }
+declare module '@nuxt/schema' {
+  interface PublicRuntimeConfig {
+    feedefy: ModuleOptions
+  }
+  // interface NuxtConfig {
+  //   feedefy?: ModuleOptions
+  // }
+  // interface NuxtOptions {
+  //   feedefy?: ModuleOptions
+  // }
+}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -29,7 +29,7 @@ export default defineNuxtModule<ModuleOptions>({
   // Default configuration options of the Nuxt module
   defaults: {
     id: '',
-    lang: ''
+    lang: undefined
   },
   setup (options, nuxt) {
     const resolver = createResolver(import.meta.url);

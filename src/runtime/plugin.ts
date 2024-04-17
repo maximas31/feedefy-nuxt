@@ -21,7 +21,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       script.setAttribute("lang", config.lang);
     }
 
-    script.setAttribute("src", `https://app.feedefy.com/embed.js?id=${id}`);
+    script.setAttribute("src", `https://app.feedefy.com/embed.js?id=${config.id}`);
     script.defer = true;
     script.addEventListener("error", () => script.remove());
 

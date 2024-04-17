@@ -4,8 +4,7 @@ export default defineNuxtConfig({
   ],
   myModule: {},
   feedefy: {
-    id: '83795f5b-d487-439a-b618-d7f0a13544be',
-    lang: '',
+    id: '',
   },
   devtools: { enabled: true }
 })
