@@ -1,6 +1,6 @@
 {
   "name": "@feedefy/nuxt",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "Embed the Feedefy widget in your Nuxt 3 App",
   "author": "feedefy",
@@ -22,13 +22,16 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "release": "npm run lint && npm run test && npm run prepack && changelogen --release",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"
   },
   "dependencies": {
     "@nuxt/kit": "^3.11.1"
+  },
+  "peerDependencies": {
+    "nuxt": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.29",
