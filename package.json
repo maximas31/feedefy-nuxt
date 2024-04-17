@@ -1,6 +1,6 @@
 {
   "name": "@feedefy/nuxt",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "type": "module",
   "description": "Embed the Feedefy widget in your Nuxt 3 App",
   "author": "feedefy",

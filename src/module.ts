@@ -10,12 +10,12 @@ declare module '@nuxt/schema' {
   interface PublicRuntimeConfig {
     feedefy: ModuleOptions
   }
-  // interface NuxtConfig {
-  //   feedefy?: ModuleOptions
-  // }
-  // interface NuxtOptions {
-  //   feedefy?: ModuleOptions
-  // }
+  interface NuxtConfig {
+    feedefy?: ModuleOptions
+  }
+  interface NuxtOptions {
+    feedefy?: ModuleOptions
+  }
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -36,7 +36,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxt.options.runtimeConfig.public.feedefy = {
       ...options,
-      // ...nuxt.options.runtimeConfig.public.feedefy
+      ...nuxt.options.runtimeConfig.public.feedefy
     };
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
