@@ -1,4 +1,4 @@
-# @feedefy/vue
+# @feedefy/nuxt
 
 The [Feedefy](https://www.feedefy.com/) widget for your Nuxt 3 app.
 
