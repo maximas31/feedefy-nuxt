@@ -6,21 +6,21 @@ export interface ModuleOptions {
   lang?: string;
 }
 
-declare module '@nuxt/schema' {
-  interface PublicRuntimeConfig {
-    feedefy: ModuleOptions
-  }
-  interface NuxtConfig {
-    feedefy?: ModuleOptions
-  }
-  interface NuxtOptions {
-    feedefy?: ModuleOptions
-  }
-}
+// declare module '@nuxt/schema' {
+//   interface PublicRuntimeConfig {
+//     feedefy: ModuleOptions
+//   }
+//   interface NuxtConfig {
+//     feedefy?: ModuleOptions
+//   }
+//   interface NuxtOptions {
+//     feedefy?: ModuleOptions
+//   }
+// }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'feedefy',
+    name: '@feedefy/nuxt',
     configKey: 'feedefy',
     compatibility: {
       nuxt: '^3.0.0'
@@ -36,7 +36,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxt.options.runtimeConfig.public.feedefy = {
       ...options,
-      ...nuxt.options.runtimeConfig.public.feedefy
+      // ...nuxt.options.runtimeConfig.public.feedefy
     };
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
