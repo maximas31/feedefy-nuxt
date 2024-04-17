@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v1.0.10
+
+[compare changes](https://github.com/maximas31/feedefy-nuxt/compare/v1.0.9...v1.0.10)
+
 ## v1.0.9
 
 [compare changes](https://github.com/maximas31/feedefy-nuxt/compare/v1.0.4...v1.0.9)
