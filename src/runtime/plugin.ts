@@ -1,7 +1,9 @@
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
 export default defineNuxtPlugin((nuxtApp) => {
-  const { id, lang } = useRuntimeConfig().feedefyOptions as any;
+  // const { id, lang } = useRuntimeConfig().feedefyOptions as any;
+
+  const { id, lang } = nuxtApp.$config.public.feedefy;
 
   nuxtApp.hook('app:mounted', () => {
     const existingScript = document.querySelector(`script[src*="https://app.feedefy.com"]`);
